@@ -1,0 +1,16 @@
+<!-- | uppercase -->
+<!-- | date -->
+<!-- | currency -->
+<h1>Turma {{turma.nome}}</h1>
+<input [(ngModel)]="turma.nome" placeholder="Nome Turma"/>
+<hr>
+<strong>Data Inicio: {{turma.data_inicio | date}}</strong><br>
+<strong>Data Fim: {{turma.data_fim | date}}</strong><br>
+<strong>Total Horas: {{turma.horas}}</strong><br>
+<hr>
+<h2>Alunos</h2>
+<ul>
+  <li *ngFor="let aluno of turma.alunos">
+    <p>Nome: {{aluno.nome}} : Idade <strong>{{aluno.idade}}</strong>
+  </li>
+<ul>
